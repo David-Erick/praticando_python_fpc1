@@ -1,5 +1,5 @@
-retangulo1 = input("Digite os pontos do primeiro retângulo (x0 y0 x1 y1): ")
-retangulo2 = input("Digite os pontos do segundo retângulo (x2 y2 x3 y3): ")
+retangulo1 = input("Digite os pontos do primeiro retângulo (x0 y0 x1 y1):  ")
+retangulo2 = input("Digite os pontos do segundo retângulo (x2 y2 x3 y3):  ")
 
 #utiliza list comprehension para transformar os valores das entradas para inteiro e sepra-los
 retangulo1 = [int(ponto) for ponto in retangulo1.split()]
