@@ -11,7 +11,7 @@ def mdc(a, b):
 qtdTrocar = []
 valido = False
 
-#verica se o numero de trocas esta com a restrição indicada pelo exercicio
+#verica se o numero de trocas esta com a restricao indicada pelo exercicio
 while valido == False:
     num_trocas = int(input(""))
     if 1 <= num_trocas<= 3000:
@@ -21,7 +21,13 @@ while valido == False:
 #e calcula a quantidade que sera trocada a partir do mdc entre elas
 for i in range (num_trocas):
     qtdFig = [int(valor) for valor in input("Digite a quantidade de figurinhas: ").split()]
-    qtdTrocar.append(mdc(qtdFig[0], qtdFig[1]))
+
+#verifica se o a quantidade de figurinhas eh valida
+    if  1 <= qtdFig[0] <=1000 and 1<= qtdFig[1] <= 1000:
+        qtdTrocar.append(mdc(qtdFig[0], qtdFig[1]))
+    else:
+        #print("invalido")
+        break
 
 #faz o print das saidas
 for elem in range(len(qtdTrocar)):
