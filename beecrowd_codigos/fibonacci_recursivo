@@ -1,0 +1,21 @@
+num_recursivas = 0
+
+def fib(n):
+    global num_recursivas
+    num_recursivas += 1
+    if n == 1 :
+        return 1
+    elif n == 0:
+        return 0
+    else:
+        return fib(n-1) + fib(n-2)
+    
+
+casos_teste = int(input(""))
+
+for i in range(casos_teste):
+    valor_fib = int(input(""))
+    fib(valor_fib)
+    print(f"fib({valor_fib}) = {num_recursivas-1} calls = {fib(valor_fib)}")
+    num_recursivas = 0
+
