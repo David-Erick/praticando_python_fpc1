@@ -22,6 +22,7 @@ while True:
         for i in range(len(lista_caracteres)):
             lista_concatenada = ''.join(lista_caracteres)
             print(lista_concatenada)
+            break
         
-    except ValueError:
+    except EOFError:
         break
